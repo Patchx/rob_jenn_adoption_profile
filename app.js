@@ -17,7 +17,7 @@ const opn = require('opn');
 
 const hostname = '127.0.0.1';
 const port = 3000;
-const build_path = './build/';
+const build_path = './src/';
 
 // ---------------------
 // - Private Functions -
@@ -52,7 +52,7 @@ function getContentType(extension_name) {
 
 const server = http.createServer((request, response) => {
 	if (request.url == '/') {
-	    var filePath = build_path + 'home';
+	    var filePath = build_path + 'index';
 	} else {
 		var filePath = build_path + request.url;
 	}
